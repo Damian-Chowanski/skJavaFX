@@ -1,8 +1,8 @@
-module com.example.skjavafx {
+module com.example.erpjavafx {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.skjavafx to javafx.fxml;
-    exports com.example.skjavafx;
+    opens com.example.erpjavafx to javafx.fxml;
+    exports com.example.erpjavafx;
 }

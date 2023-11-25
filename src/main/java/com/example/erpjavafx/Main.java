@@ -1,4 +1,4 @@
-package com.example.skjavafx;
+package com.example.erpjavafx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
