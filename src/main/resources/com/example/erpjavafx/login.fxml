@@ -14,16 +14,20 @@
       <VBox alignment="CENTER" layoutX="250.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="60.0">
          <children>
             <Label text="Log In" />
-            <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
+            <HBox alignment="CENTER" prefHeight="90.0" prefWidth="480.0" spacing="5.0">
                <children>
-                  <Label text="Login" />
-                  <TextField />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefWidth="200.0" spacing="20.0">
-               <children>
-                  <Label text="Password" />
-                  <TextField />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label text="Login" />
+                        <Label text="Password" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="198.0" prefWidth="151.0" spacing="20.0">
+                     <children>
+                        <TextField />
+                        <TextField />
+                     </children>
+                  </VBox>
                </children>
             </HBox>
             <Button mnemonicParsing="false" text="Log In" />
