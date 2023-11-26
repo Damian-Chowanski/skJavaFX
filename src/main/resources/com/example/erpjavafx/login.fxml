@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,18 +9,19 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="534.0" layoutY="14.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="X" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
+      <Button layoutX="534.0" layoutY="14.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="exit-button" text="X" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0" />
       <VBox alignment="CENTER" layoutX="250.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="60.0">
          <children>
-            <Label text="Log In" />
+            <Label styleClass="title" text="ERP System" />
+            <Label styleClass="text" text="Log In" />
             <HBox alignment="CENTER" prefHeight="90.0" prefWidth="480.0" spacing="5.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
                      <children>
-                        <Label text="Login" />
-                        <Label text="Password" />
+                        <Label styleClass="text" text="Login" />
+                        <Label styleClass="text" text="Password" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="198.0" prefWidth="151.0" spacing="20.0">
@@ -30,8 +32,12 @@
                   </VBox>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" text="Log In" />
+            <Button mnemonicParsing="false" styleClass="login-button" text="Log In" />
          </children>
       </VBox>
    </children>
+   <stylesheets>
+      <URL value="@../../../CSS/login.css" />
+      <URL value="@../../../CSS/global-colors.css" />
+   </stylesheets>
 </AnchorPane>
