@@ -5,4 +5,6 @@ module com.example.erpjavafx {
 
     opens com.example.erpjavafx to javafx.fxml;
     exports com.example.erpjavafx;
+    exports com.example.erpjavafx.controller;
+    opens com.example.erpjavafx.controller to javafx.fxml;
 }

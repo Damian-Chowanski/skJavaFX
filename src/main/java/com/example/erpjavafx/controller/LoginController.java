@@ -1,4 +1,4 @@
-package com.example.erpjavafx;
+package com.example.erpjavafx.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
