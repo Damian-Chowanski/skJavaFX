@@ -1,5 +1,7 @@
 package com.example.erpjavafx.controller;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -18,5 +20,8 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("login Started");
+        exitBtn.setOnAction((x) -> {
+            System.out.println("exit");
+        });
     }
 }
