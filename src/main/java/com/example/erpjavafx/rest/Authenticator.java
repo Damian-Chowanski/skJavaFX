@@ -3,5 +3,6 @@ package com.example.erpjavafx.rest;
 import com.example.erpjavafx.dto.UserCredentialsDto;
 
 public interface Authenticator {
-    void authenticate(UserCredentialsDto userCredentialsDto);
+    void authenticate(UserCredentialsDto userCredentialsDto, AuthenticationResultHandler authenticationResultHandler);
+
 }

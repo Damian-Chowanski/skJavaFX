@@ -4,6 +4,7 @@ import com.example.erpjavafx.dto.UserCredentialsDto;
 import com.example.erpjavafx.factory.PopupFactory;
 import com.example.erpjavafx.rest.Authenticator;
 import com.example.erpjavafx.rest.AuthenticatorImpl;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -62,7 +63,12 @@ public class LoginController implements Initializable {
         UserCredentialsDto dto = new UserCredentialsDto();
         dto.setLogin(login);
         dto.setPassword(password);
-        authenticator.authenticate(dto );
+        authenticator.authenticate(dto, (authenticationResult) -> {
+            Platform.runLater(() -> {
+                waitingPopup.close();
+                System.out.println(authenticationResult);
+            });
+        });
     }
 
     private void initializeExitButton() {
