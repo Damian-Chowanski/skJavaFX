@@ -1,5 +1,7 @@
 package com.example.erpjavafx.controller;
 
+import com.example.erpjavafx.dto.UserCredentialsDto;
+import com.example.erpjavafx.factory.PopupFactory;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -13,6 +15,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
+
+    private PopupFactory popupFactory;
 
     @FXML
     private Button exitBtn;
@@ -29,6 +33,10 @@ public class LoginController implements Initializable {
     @FXML
     private TextField password_tf;
 
+    public LoginController(){
+        popupFactory = new PopupFactory();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("login Started");
@@ -43,10 +51,13 @@ public class LoginController implements Initializable {
     }
 
     private void performAuthentication() {
+        Stage waitingPopup = popupFactory.createWaitingPopup("Connecting to the server...");
+        waitingPopup.show();
         String login = login_tf.getText();
         String password = password_tf.getText();
-        System.out.println(login);
-        System.out.println(password);
+        UserCredentialsDto dto = new UserCredentialsDto();
+        dto.setLogin(login);
+        dto.setPassword(password);
     }
 
     private void initializeExitButton() {
