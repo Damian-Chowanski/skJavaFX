@@ -2,6 +2,8 @@ package com.example.erpjavafx.controller;
 
 import com.example.erpjavafx.dto.UserCredentialsDto;
 import com.example.erpjavafx.factory.PopupFactory;
+import com.example.erpjavafx.rest.Authenticator;
+import com.example.erpjavafx.rest.AuthenticatorImpl;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -17,6 +19,7 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     private PopupFactory popupFactory;
+    private Authenticator authenticator;
 
     @FXML
     private Button exitBtn;
@@ -35,6 +38,7 @@ public class LoginController implements Initializable {
 
     public LoginController(){
         popupFactory = new PopupFactory();
+        authenticator = new AuthenticatorImpl();
     }
 
     @Override
@@ -58,6 +62,7 @@ public class LoginController implements Initializable {
         UserCredentialsDto dto = new UserCredentialsDto();
         dto.setLogin(login);
         dto.setPassword(password);
+        authenticator.authenticate(dto );
     }
 
     private void initializeExitButton() {
