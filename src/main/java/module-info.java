@@ -1,6 +1,7 @@
 module com.example.erpjavafx {
     requires javafx.controls;
     requires javafx.fxml;
+    requires lombok;
 
 
     opens com.example.erpjavafx to javafx.fxml;

@@ -1,12 +1,10 @@
 package com.example.erpjavafx.controller;
 
-import com.example.erpjavafx.dto.UserCredentialsDto;
+import com.example.erpjavafx.dto.OperatorCredentialsDto;
 import com.example.erpjavafx.factory.PopupFactory;
 import com.example.erpjavafx.rest.Authenticator;
 import com.example.erpjavafx.rest.AuthenticatorImpl;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -60,7 +58,7 @@ public class LoginController implements Initializable {
         waitingPopup.show();
         String login = login_tf.getText();
         String password = password_tf.getText();
-        UserCredentialsDto dto = new UserCredentialsDto();
+        OperatorCredentialsDto dto = new OperatorCredentialsDto();
         dto.setLogin(login);
         dto.setPassword(password);
         authenticator.authenticate(dto, (authenticationResult) -> {

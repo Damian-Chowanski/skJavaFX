@@ -1,8 +1,8 @@
 package com.example.erpjavafx.rest;
 
-import com.example.erpjavafx.dto.UserCredentialsDto;
+import com.example.erpjavafx.dto.OperatorCredentialsDto;
 
 public interface Authenticator {
-    void authenticate(UserCredentialsDto userCredentialsDto, AuthenticationResultHandler authenticationResultHandler);
+    void authenticate(OperatorCredentialsDto operatorCredentialsDto, AuthenticationResultHandler authenticationResultHandler);
 
 }
