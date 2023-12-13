@@ -64,7 +64,7 @@ public class LoginController implements Initializable {
         authenticator.authenticate(dto, (authenticationResult) -> {
             Platform.runLater(() -> {
                 waitingPopup.close();
-                System.out.println(authenticationResult);
+                System.out.println(authenticationResult.isAuthenticated());
             });
         });
     }
